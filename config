@@ -1,0 +1,29 @@
+#PS1 ENVIRONMENT VARIABLE
+PS1="%n %1~ % "
+
+# PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
+# PHP
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# MYSQL
+export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@5.7/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@5.7/include"
+
+# ZSH-AUTOSUGGESTIONS
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# PYTHON
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
+# LLVM WITH OPENMP
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+alias clang="/usr/local/opt/llvm/bin/clang"
+alias clang++="/usr/local/opt/llvm/bin/clang++"
